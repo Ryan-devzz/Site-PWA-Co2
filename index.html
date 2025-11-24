@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1f2937" />
+  <title>Calculadora CO₂</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/icon-512.png" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Calculadora CO₂</h1>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <ul>
+      <li><a href="#" data-page="home">🏠 Início</a></li>
+      <li><a href="#" data-page="add">➕ Registrar Nível</a></li>
+      <li><a href="#" data-page="history">📊 Histórico</a></li>
+      <li><a href="#" data-page="settings">⚙️ Configurações</a></li>
+      <li><a href="#" data-page="help">❓ Ajuda</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <section id="page-home" class="page active">
+      <h2>Bem-vindo!</h2>
+      <p>Registre os níveis de CO₂ e acompanhe suas variações.</p>
+      <img src="icons/icon-192.png" alt="Logo CO₂" />
+    </section>
+
+    <section id="page-add" class="page">
+      <h2>Registrar Nível de CO₂</h2>
+      <input type="number" id="co2Input" placeholder="Digite o nível em ppm" />
+      <button id="addCo2Btn">Salvar</button>
+    </section>
+
+    <section id="page-history" class="page">
+      <h2>Histórico de Registros</h2>
+      <ul id="co2List"></ul>
+      <p id="comparison"></p>
+    </section>
+
+    <section id="page-settings" class="page">
+      <h2>Configurações</h2>
+      <p>Ajustes futuros poderão ser feitos aqui.</p>
+    </section>
+
+    <section id="page-help" class="page">
+      <h2>Ajuda</h2>
+      <p>Insira os níveis medidos em ppm para acompanhar sua evolução.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
